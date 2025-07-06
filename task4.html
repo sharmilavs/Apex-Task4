@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="task4.css" />
+</head>
+<body>
+      <div id="welcome-screen">
+    <h1>👋 Welcome to My Portfolio</h1>
+    <p>Discover my skills, projects, and more!</p>
+    <button id="enter-btn">Enter Site</button>
+  </div>
+
+
+<header>
+  <h2>My Portfolio</h2>
+  <nav class="nav-links">
+    <a onclick="showSection('portfolio')">Portfolio</a>
+    <a onclick="showSection('todo')">To-Do List</a>
+    <a onclick="showSection('products')">Products</a>
+  </nav>
+</header>
+
+<section id="portfolio" class="active">
+  <h1>About Me</h1>
+  <p>Hello! I'm <strong>Sharmila</strong> — a  web developer  in HTML, CSS, and JavaScript. I love creating beautiful and functional user interfaces.</p>
+
+  <h1>Projects</h1>
+  <ul>
+    <li><strong>To-Do List</strong>: Task management using local storage</li>
+    <li><strong>Product Page</strong>: With filtering and sorting</li>
+  </ul>
+
+  <h1>Contact Me</h1>
+  <form id="contactForm">
+    <input type="text" placeholder="Your Name" required />
+    <input type="email" placeholder="Your Email" required />
+    <textarea placeholder="Your Message" required></textarea>
+    <button type="submit">Send</button>
+    <p id="contactSuccess" style="color: green; display: none;">Message sent!</p>
+  </form>
+</section>
+
+
+<section id="todo">
+  <h1>📝 My To-Do List</h1>
+  <form id="todo-form">
+    <input type="text" id="todo-input" placeholder="Enter a task" required />
+    <button type="submit">Add Task</button>
+  </form>
+  <ul id="todo-list"></ul>
+</section>
+
+
+<section id="products">
+  <h1>🛍️ Product Listing</h1>
+  <select id="filter">
+    <option value="All">All Categories</option>
+    <option value="Electronics">Electronics</option>
+    <option value="Clothing">Clothing</option>
+  </select>
+
+  <select id="sort">
+    <option value="none">Sort By</option>
+    <option value="price-asc">Price: Low to High</option>
+    <option value="price-desc">Price: High to Low</option>
+    <option value="rating-desc">Rating: High to Low</option>
+  </select>
+
+  <div class="product-grid" id="productGrid"></div>
+</section>
+
+
+<footer>
+  <p>&copy; 2025 Sharmila.All rights are reserved.</p>
+</footer>
+
+  <script src="task4.js"></script>
+</body>
+</html>
